@@ -7,7 +7,6 @@
     String fromAddress = portletPreferences.getValue("fromAddress", "fromAddress@mailinator.com");
     String toAddress = portletPreferences.getValue("toAddress", "toAddress@mailinator.com");
     String subject = portletPreferences.getValue("subject", "My suggestion");
-    String emailServiceURL = portletPreferences.getValue("emailServiceURL", "http://example.com/rest/email-service/send");
 
     String introductionText = portletPreferences.getValue("introductionText", "Send us your Feedback:");
     String confirmationText = portletPreferences.getValue("confirmationText", "Thank you for the feedback!");
@@ -17,7 +16,6 @@
     <aui:input name="<%= Constants.CMD %>" type="hidden" value="<%= Constants.UPDATE %>" />
     <aui:fieldset label="preferences">
         <aui:input label="SMTP host name:" name="preferences--smtpHost--" value="<%=smtpHost%>"/>
-        <aui:input label="Email REST Service URL:" name="preferences--emailServiceURL--" value="<%=emailServiceURL%>"/>
         <aui:input label="From address:" name="preferences--fromAddress--" value="<%=fromAddress%>"/>
         <aui:input label="To address:" name="preferences--toAddress--" value="<%=toAddress%>"/>
         <aui:input label="Subject:" name="preferences--subject--" value="<%=subject%>"/>
